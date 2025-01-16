@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Oblig-1/Oblig-1.iml" filepath="$PROJECT_DIR$/Oblig-1/Oblig-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/programmering-2-benjamin-rogne.iml" filepath="$PROJECT_DIR$/.idea/programmering-2-benjamin-rogne.iml" />
     </modules>
   </component>
