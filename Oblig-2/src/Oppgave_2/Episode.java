@@ -1,4 +1,5 @@
-package Oppgave_1;
+package Oppgave_2;
+import java.util.Random;
 
 public class Episode {
     private String title;
@@ -6,12 +7,17 @@ public class Episode {
     private int seasonNumber;
     private int runtime;
 
-
     public Episode(String title, int episodeNumber,int seasonNumber, int runtime){
         this.title = title;
         this.episodeNumber = episodeNumber;
         this.seasonNumber = seasonNumber;
         this.runtime = runtime;
+    }
+
+    // Statisk metode for å generere en tilfeldig runtime mellom 20 og 30 minutter
+    public static int getRandomRuntime() {
+        Random random = new Random();
+        return random.nextInt(11) + 20;  // Tilfeldig tall mellom 20 og 30
     }
 
     public Episode(String title, int episodeNumber, int seasonNumber) {
@@ -49,5 +55,12 @@ public class Episode {
 
     public void setRuntime(int runtime) {
         this.runtime = runtime;
+    }
+    @Override
+    public String toString() {
+        return "Episode title: " + title + "\n" +
+                "Episode number: " + episodeNumber + "\n" +
+                "Season number: " + seasonNumber + "\n" +
+                "Runtime in minutes: " + runtime;
     }
 }
