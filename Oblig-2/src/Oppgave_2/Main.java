@@ -7,7 +7,6 @@ public class Main {
         // Oppretter en TV-serie med LocalDate
         TVSeries dexter = new TVSeries("Dexter", "A series about a killer who kills other killers at night.", LocalDate.of(2006, 10, 1));
 
-        // brukte Chat-GPT til å legge til å lage alle episodene
         // Sesong 1
         Episode ep1S1 = new Episode("Dexter", 1, 1, Episode.getRandomRuntime());
         Episode ep2S1 = new Episode("Crocodile", 2, 1, Episode.getRandomRuntime());
@@ -68,7 +67,20 @@ public class Main {
         Episode ep9S5 = new Episode("Teenage Wasteland", 9, 5, Episode.getRandomRuntime());
         Episode ep10S5 = new Episode("In the Beginning", 10, 5, Episode.getRandomRuntime());
 
-        // Adding episodes to the TVSeries "Dexter"
+        // Test episoder
+        Episode ep11S3 = new Episode("I Had a Dream", 11, 3, Episode.getRandomRuntime());
+        Episode ep12S3 = new Episode("Do You Take Dexter Morgan?", 12, 3, Episode.getRandomRuntime());
+
+        Episode ep11S5 = new Episode("Hop a Freighter", 11, 5, Episode.getRandomRuntime());
+        Episode ep12S5 = new Episode("The Big One", 12, 5, Episode.getRandomRuntime());
+
+        Episode ep11S6 = new Episode("Talk to the Hand", 11, 6, Episode.getRandomRuntime());
+
+        Episode ep11S7 = new Episode("Do You See What I See?", 11, 7, Episode.getRandomRuntime());
+        Episode ep12S7 = new Episode("Surprise, Motherf***er!", 12, 7, Episode.getRandomRuntime());
+
+
+        // legger episoder til valgt tv serie
         dexter.addEpisode(ep1S1);
         dexter.addEpisode(ep2S1);
         dexter.addEpisode(ep3S1);
@@ -79,6 +91,7 @@ public class Main {
         dexter.addEpisode(ep8S1);
         dexter.addEpisode(ep9S1);
         dexter.addEpisode(ep10S1);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
 
         dexter.addEpisode(ep1S2);
         dexter.addEpisode(ep2S2);
@@ -90,6 +103,7 @@ public class Main {
         dexter.addEpisode(ep8S2);
         dexter.addEpisode(ep9S2);
         dexter.addEpisode(ep10S2);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
 
         dexter.addEpisode(ep1S3);
         dexter.addEpisode(ep2S3);
@@ -101,6 +115,7 @@ public class Main {
         dexter.addEpisode(ep8S3);
         dexter.addEpisode(ep9S3);
         dexter.addEpisode(ep10S3);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
 
         dexter.addEpisode(ep1S4);
         dexter.addEpisode(ep2S4);
@@ -112,6 +127,7 @@ public class Main {
         dexter.addEpisode(ep8S4);
         dexter.addEpisode(ep9S4);
         dexter.addEpisode(ep10S4);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
 
         dexter.addEpisode(ep1S5);
         dexter.addEpisode(ep2S5);
@@ -123,21 +139,48 @@ public class Main {
         dexter.addEpisode(ep8S5);
         dexter.addEpisode(ep9S5);
         dexter.addEpisode(ep10S5);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
 
-        // `toString()` is automatically called here:
+        // printer ut info om valgt serie
         System.out.println(dexter);
 
+        // printer ut episodene til valgt serie
         System.out.println("\nEpisodes:");
         for (Episode episode : dexter.getEpisodes()) {
-            System.out.println(episode + "\n"); // `toString()` is automatically called
+            System.out.println(episode + "\n");
         }
-        // Retrieve and print all episodes from Season 1
+
+        // henter alle episoder i valgt sesong og legger dem til liste
         ArrayList<Episode> season4Episodes = dexter.getEpisodesInSeason(4);
 
-        System.out.println("Episodes from Season 1:" + "\n");
+        // printer ut episodene fra valgt sesong
+        System.out.println("Episodes from Season 4:" + "\n");
         for (Episode episode : season4Episodes) {
             System.out.println(episode + "\n");
         }
-        System.out.println("\nOppdatert gjennomsnittstid: " + dexter.getAverageRuntime() + " minutter");
+        // printer ut nåværende gjenomsnitstid for alle episoder i tv serie
+        System.out.println("\nAverage runtime: " + dexter.getAverageRuntime() + " minutes");
+
+        //legge til episode i eldre sesong og hoppe over en eksisterende sesong
+        dexter.addEpisode(ep11S3);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+        dexter.addEpisode(ep11S5);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+
+        //legge til episode som hopper over over ikke eksisterende sesong current 5 til 7
+        dexter.addEpisode(ep12S5);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+        dexter.addEpisode(ep12S7);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+
+        //legge til episode som er en over og entil over
+        dexter.addEpisode(ep11S6);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+        dexter.addEpisode(ep12S3);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+        dexter.addEpisode(ep11S7);
+        System.out.println("Number of seasons: " + dexter.getNumSeasons());
+
+        System.out.println("\nAverage runtime: " + dexter.getAverageRuntime() + " minutes");
     }
 }

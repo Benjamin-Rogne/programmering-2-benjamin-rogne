@@ -14,16 +14,18 @@ public class Episode {
         this.runtime = runtime;
     }
 
-    // Statisk metode for å generere en tilfeldig runtime mellom 20 og 30 minutter
+    // metode for å generere en tilfeldig tall for runtime mellom 20 og 30 minutter
     public static int getRandomRuntime() {
         Random random = new Random();
         return random.nextInt(11) + 20;  // Tilfeldig tall mellom 20 og 30
     }
 
+    // gjør at dersom runtime ikke var oppgitt ville den bli 0
     public Episode(String title, int episodeNumber, int seasonNumber) {
-        this(title, episodeNumber, seasonNumber, 0); // kaller andre konstrukter med standar verdi
+        this(title, episodeNumber, seasonNumber, 0);
     }
-    // Getter-metoder (henter verdier)
+
+    // Getter-metoder
     public String getTitle() {
         return title;
     }
@@ -40,7 +42,7 @@ public class Episode {
         return runtime;
     }
 
-    // Setter-metoder (oppdaterer verdier)
+    // Setter-metoder
     public void setTitle(String title) {
         this.title = title;
     }
@@ -56,6 +58,8 @@ public class Episode {
     public void setRuntime(int runtime) {
         this.runtime = runtime;
     }
+
+    // utskrift for episoder
     @Override
     public String toString() {
         return "Episode title: " + title + "\n" +

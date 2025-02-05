@@ -41,7 +41,7 @@ public class TVSeries {
 
         // Sjekk om episoden hopper over mer enn én sesong
         if (episodeSeason > numSeasons + 1) {
-            System.out.println("Feil: Du kan ikke hoppe over sesonger! Nåværende sesong er " + numSeasons);
+            System.out.println("ERROR: you can not skip over seasons, current: " + numSeasons);
             return;
         }
 
@@ -52,7 +52,7 @@ public class TVSeries {
 
         // Legg til episoden
         episodes.add(episode);
-        System.out.println("Episoden " + episode.getTitle() + " (S" + episodeSeason + "E" + episode.getEpisodeNumber() + ") er lagt til.");
+        System.out.println("Episode: " + episode.getTitle() + " (S" + episodeSeason + "E" + episode.getEpisodeNumber() + ") is successfully added.");
         updateAverageRuntime();  // Recalculate average runtime
     }
 
@@ -73,7 +73,10 @@ public class TVSeries {
         return new ArrayList<>(episodes); // Returnerer en kopi for sikkerhet
     }
 
-    // Getter for average runtime
+    public int getNumSeasons() {
+        return numSeasons;
+    }
+
     public double getAverageRuntime() {
         return averageRuntime;
     }
@@ -91,6 +94,7 @@ public class TVSeries {
         this.releaseDate = releaseDate;
     }
 
+    // utskrift for serier
     @Override
     public String toString() {
         return "TV series Title: " + title + "\n" +
@@ -99,6 +103,7 @@ public class TVSeries {
                 "Number of episodes: " + episodes.size();
     }
 
+    // henter ut episoder fra en valgt sesong
     public ArrayList<Episode> getEpisodesInSeason(int seasonNumber) {
         ArrayList<Episode> seasonEpisodes = new ArrayList<>();
 
@@ -107,9 +112,6 @@ public class TVSeries {
                 seasonEpisodes.add(episode);
             }
         }
-
         return seasonEpisodes;  // Returns the filtered list
     }
-
-
 }
