@@ -104,4 +104,9 @@ public class TVSeriesCSVRepository implements TVSeriesRepository{
             System.err.println(e.getMessage());
         }
     }
+
+    @Override
+    public void addTVSeries(TVSeries tvSeries) {
+
+    }
 }

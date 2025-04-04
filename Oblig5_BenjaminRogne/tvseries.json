@@ -1,17 +1,53 @@
 [ {
   "title" : "Breaking Bad",
-  "description" : "Drug manufacturer/dealer adventures",
+  "description" : "A high school chemistry teacher diagnosed with cancer starts making meth to secure his family's future.",
   "releaseDate" : [ 2008, 1, 20 ],
-  "episodes" : [ ],
-  "averageRuntime" : 0.0,
-  "numSeasons" : 0,
+  "episodes" : [ {
+    "title" : "Pilot",
+    "description" : "Walter White, a high school chemistry teacher, turns to cooking meth after a cancer diagnosis.",
+    "runtimeInMinutes" : 58,
+    "releaseDate" : [ 2008, 1, 20 ],
+    "director" : null,
+    "roles" : [ ],
+    "episodeNumber" : 1,
+    "seasonNumber" : 1
+  }, {
+    "title" : "Cat’s in the Bag...",
+    "description" : "Walt and Jesse attempt to deal with the aftermath of their first cook.",
+    "runtimeInMinutes" : 48,
+    "releaseDate" : [ 2008, 1, 27 ],
+    "director" : null,
+    "roles" : [ ],
+    "episodeNumber" : 2,
+    "seasonNumber" : 1
+  } ],
+  "averageRuntime" : 53.0,
+  "numSeasons" : 1,
   "cast" : [ ]
 }, {
-  "title" : "Days of our Lives",
-  "description" : "Long running series",
-  "releaseDate" : [ 1965, 11, 8 ],
-  "episodes" : [ ],
-  "averageRuntime" : 0.0,
-  "numSeasons" : 0,
+  "title" : "Game of Thrones",
+  "description" : "Nine noble families wage war against each other while an ancient enemy rises again.",
+  "releaseDate" : [ 2011, 4, 17 ],
+  "episodes" : [ {
+    "title" : "Winter Is Coming",
+    "description" : "Ned Stark is asked to serve as Hand of the King while a threat from beyond the Wall rises.",
+    "runtimeInMinutes" : 62,
+    "releaseDate" : [ 2011, 4, 17 ],
+    "director" : null,
+    "roles" : [ ],
+    "episodeNumber" : 1,
+    "seasonNumber" : 1
+  }, {
+    "title" : "The Kingsroad",
+    "description" : "Jon Snow heads north while Arya and Sansa face new challenges.",
+    "runtimeInMinutes" : 56,
+    "releaseDate" : [ 2011, 4, 24 ],
+    "director" : null,
+    "roles" : [ ],
+    "episodeNumber" : 2,
+    "seasonNumber" : 1
+  } ],
+  "averageRuntime" : 59.0,
+  "numSeasons" : 1,
   "cast" : [ ]
 } ]

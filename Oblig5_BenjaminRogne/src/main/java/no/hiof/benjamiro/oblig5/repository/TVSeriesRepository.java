@@ -9,5 +9,6 @@ public interface TVSeriesRepository {
     ArrayList<TVSeries> getAllTVSeries();
     TVSeries getTVSeries(String title);
     void addListOfTVSeries(ArrayList<TVSeries> listOfTVSeries);
+    void addTVSeries(TVSeries tvSeries);
 
 }

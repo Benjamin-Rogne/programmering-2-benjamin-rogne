@@ -44,6 +44,11 @@ public class TVSeriesJSONRepository implements TVSeriesRepository{
     }
 
     @Override
+    public void addTVSeries(TVSeries tvSeries) {
+
+    }
+
+    @Override
     public ArrayList<TVSeries> getAllTVSeries() {
         try {
             TVSeries[] tvSeriesArray = objectMapper.readValue(file, TVSeries[].class);
